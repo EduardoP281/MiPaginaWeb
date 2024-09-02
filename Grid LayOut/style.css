@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    background-color: #F4C6D7;
+    color: #4A4A4A;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+nav ul.menu li{
+    margin: 0 1rem;
+}
+nav ul.menu li a{
+    text-decoration: none;
+    color: #4A4A4A;
+}
+
+/* Diseño de Cuadricula*/
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "intro intro"
+        "gallery articles"
+        "footer footer"
+    ;
+    gap: 1rem;
+}
+
+.intro{
+    grid-area: intro;
+    background-color:#F1F1F1 ;
+    padding: 1rem;
+    color: #4A4A4A;
+}
+
+.gallery{
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: auto;
+}
+.gallery-item {
+    background-color: #F1F1F1;
+    padding: 1rem;
+    text-align: center;
+    color: #4A4A4A;
+}
+
+.articles{
+    grid-area: articles;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.articles article{
+    background-color: #F1F1F1;
+    padding: 1rem;
+    border: 1px solid #F7B6A2;
+    color: #4A4A4A;
+}
+
+footer{
+    grid-area: footer;
+    background-color: #F1F1F1;
+    color: #4A4A4A;
+    text-align: center;
+    padding: 1rem;
+}
